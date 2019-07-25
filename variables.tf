@@ -1,5 +1,5 @@
 variable "name" {
-  description = "(Required) The name of the Cognito User Pool"
+  description = "(Required) Name of the Cognito User Pool"
 }
 
 ##########################################################################
@@ -7,7 +7,7 @@ variable "name" {
 ##########################################################################
 
 variable "client_name" {
-  description = "(Required) The name of the application client."
+  description = "(Required) Name of the application client."
 }
 
 variable "allowed_oauth_flows" {
@@ -33,6 +33,31 @@ variable "callback_urls" {
 # Domain name
 
 variable "domain_name" {
-  description = "(Required) The domain string."
+  description = "(Required) Domain string."
 }
 
+##########################################################################
+# Federation 
+##########################################################################
+
+# Identity providers
+
+variable "provider_name" {
+  description = "(Required) Provider name"
+}
+
+variable "provider_type" {
+  description = "(Required) Provider type"
+}
+
+variable "provider_details" {
+  description = "(Optional) Map of attribute mapping of user pool attributes"
+  default     = {}
+}
+
+# Attribute mapping
+
+variable "attribute_mapping" {
+  description = "(Optional) Map of attribute mapping of user pool attributes"
+  default     = {}
+}
