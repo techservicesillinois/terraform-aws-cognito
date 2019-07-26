@@ -27,3 +27,12 @@ resource "aws_cognito_identity_provider" "default" {
 
   attribute_mapping = "${var.attribute_mapping}"
 }
+
+resource "aws_cognito_resource_server" "default" {
+  identifier = "${var.resource_server_identifier}"
+  name       = "${var.resource_server_name}"
+
+  scope = "${var.resource_server_scope}"
+
+  user_pool_id = "${aws_cognito_user_pool.default.id}"
+}
