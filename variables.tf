@@ -46,21 +46,6 @@ variable "domain_name" {
   description = "(Required) Domain string."
 }
 
-# Resource servers
-
-variable "resource_server_identifier" {
-  description = "(Required) An identifier for the resource server"
-}
-
-variable "resource_server_name" {
-  description = "(Required) A name for the resource server."
-}
-
-variable "resource_server_scope" {
-  description = "(Optional) List of Authorization Scope"
-  default     = []
-}
-
 ##########################################################################
 # Federation 
 ##########################################################################
