@@ -30,6 +30,11 @@ variable "callback_urls" {
   default     = []
 }
 
+variable "logout_urls" {
+  description = "(Optional) List of allowed logout URLs for the identity providers."
+  default     = []
+}
+
 variable "supported_identity_providers" {
   description = "(Optional) List of provider names for the identity providers that are supported on this client."
   default     = []

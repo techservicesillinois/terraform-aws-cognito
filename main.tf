@@ -8,6 +8,7 @@ resource "aws_cognito_user_pool_client" "default" {
   allowed_oauth_flows_user_pool_client = "${var.allowed_oauth_flows_user_pool_client  }"
   allowed_oauth_scopes                 = ["${var.allowed_oauth_scopes}"]
   callback_urls                        = ["${var.callback_urls}"]
+  logout_urls                          = ["${var.logout_urls}"]
   supported_identity_providers         = ["${aws_cognito_identity_provider.default.provider_name}"]
 
   user_pool_id = "${aws_cognito_user_pool.default.id}"

@@ -99,6 +99,8 @@ The following arguments are supported:
 
 * `callback_urls` - List of allowed callback URLs for the identity providers
 
+* `logout_urls` - List of allowed logout URLs for the identity providers
+
 * `supported_identity_providers` - List of provider names for the identity providers that are supported on this client
 
 * `domain_name` - (Required) Domain string
