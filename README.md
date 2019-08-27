@@ -35,6 +35,10 @@ module "cognito-userpool" {
       "http://localhost:3000"
     ]
 
+    logout_urls = [ 
+      "http://localhost:3000?action=logout"
+    ]
+
     supported_identity_providers = [
       "shibboleth-test"
     ]
