@@ -41,19 +41,6 @@ module "cognito-userpool" {
 
     domain_name = "directory-editor-tf"
 
-    resource_server_identifier = "https://directory-editor.as-test.techservices.illinois.edu"
-    resource_server_name = "directory-editor-tf"
-
-    resource_server_scope = [
-      {
-        scope_name = "read"
-        scope_description = "Read scope"
-      },
-      {
-        scope_name = "write"
-        scope_description = "Write scope"
-      }
-    ] 
 
     ##########################################################################
     # Federation settings
