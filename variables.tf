@@ -12,6 +12,7 @@ variable "client_name" {
 
 variable "allowed_oauth_flows" {
   description = "(Optional) List of allowed OAuth flows (code, implicit, client_credentials)."
+  type        = list(string)
   default     = []
 }
 
@@ -22,21 +23,25 @@ variable "allowed_oauth_flows_user_pool_client" {
 
 variable "allowed_oauth_scopes" {
   description = "(Optional) List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin)."
+  type        = list(string)
   default     = []
 }
 
 variable "callback_urls" {
   description = "(Optional) List of allowed callback URLs for the identity providers."
+  type        = list(string)
   default     = []
 }
 
 variable "logout_urls" {
   description = "(Optional) List of allowed logout URLs for the identity providers."
+  type        = list(string)
   default     = []
 }
 
 variable "supported_identity_providers" {
   description = "(Optional) List of provider names for the identity providers that are supported on this client."
+  type        = list(string)
   default     = []
 }
 
@@ -62,6 +67,7 @@ variable "provider_type" {
 
 variable "provider_details" {
   description = "(Optional) Map of attribute mapping of user pool attributes"
+  type        = map(string)
   default     = {}
 }
 
@@ -69,5 +75,6 @@ variable "provider_details" {
 
 variable "attribute_mapping" {
   description = "(Optional) Map of attribute mapping of user pool attributes"
+  type        = map(string)
   default     = {}
 }
