@@ -65,6 +65,10 @@ variable "provider_type" {
   description = "(Required) Provider type"
 }
 
+variable "client_secret_ssm_path" {
+  description = "(Required) SSM path to client secret in provider_details map"
+}
+
 variable "provider_details" {
   description = "(Optional) Map of attribute mapping of user pool attributes"
   type        = map(string)
