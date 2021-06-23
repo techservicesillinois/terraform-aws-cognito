@@ -1,6 +1,6 @@
-# terraform-aws-cognito
+# cognito
 
-[![Build Status](https://drone.techservices.illinois.edu/api/badges/techservicesillinois/terraform-aws-cognito/status.svg)](https://drone.techservices.illinois.edu/techservicesillinois/terraform-aws-cognito)
+[![Terraform actions status](https://github.com/techservicesillinois/terraform-aws-cognito/workflows/terraform/badge.svg)](https://github.com/techservicesillinois/terraform-aws-cognito/actions)
 
 Provide AWS Cognito User Pool and Identity Pool 
 
@@ -13,7 +13,7 @@ This configuration creates an Cognito User Pool with with app clients and identi
 
 ```hcl
 module "cognito-userpool" {
-    source = "git::git@github.com:techservicesillinois/terraform-aws-cognito.git//?ref=v1.0.0"
+    source = "git@github.com:techservicesillinois/terraform-aws-cognito
 
     name = "directory-editor-tf"
 
